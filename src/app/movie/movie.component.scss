@@ -1,0 +1,15 @@
+mat-icon {
+  color: #fff8e6;
+
+  &.shine {
+    color: #FFC107;
+  }
+}
+
+.grid-height {
+  min-height: calc(100vh - 64px);
+
+  @media (max-width: 600px) {
+    min-height: calc(100vh - 56px);
+  }
+}

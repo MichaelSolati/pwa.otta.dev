@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+$primary: mat-palette($mat-red, 700);
+$accent: mat-palette($mat-amber, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+
+$text: #FFFFFF;
+$background: #212121;
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $background;
+  color: $text;
+  margin: 0;
+  padding: 64px 0 0 0;
+  @media (max-width: 600px) {
+    padding-top: 56px 0 0 0;
+  }
+}
+
+app-navbar {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6, label, p {
+  color: $text !important;
+}
+
+.navbar-photo {
+  height: 40px;
+  max-height: 100%;
+}
+
+.navbar-spacer {
+  flex: 1 1 auto;
+}
+
+.grid-image {
+    background: no-repeat rgba(0,0,0,0);
+    background-size: contain;
+    background-position: center;
+    height: 100%;
+    width: auto;
+}
+
+.gutter {
+  figure.mat-figure {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.mat-grid-tile .mat-figure {
+  display: block !important;
+}

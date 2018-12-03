@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ngpwa-com"
+  },
+  "targets": {
+    "ngpwa-com": {
+      "hosting": {
+        "host": [
+          "step0-ngpwa-com"
+        ]
+      }
+    }
+  }
+}

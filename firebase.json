@@ -1,0 +1,13 @@
+{
+  "hosting": {
+    "target": "host",
+    "predeploy": [
+      "npm run build"
+    ],
+    "public": "dist/ngpwa-com",
+    "rewrites": [{
+      "source": "**",
+      "destination": "/index.html"
+    }]
+  }
+}

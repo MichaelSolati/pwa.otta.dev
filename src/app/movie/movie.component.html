@@ -1,0 +1,13 @@
+<app-navbar [back]="true" [title]="movie ? movie.title : null"></app-navbar>
+<mat-grid-list *ngIf="movie" cols="3" rowHeight="fit" class="grid-height">
+  <mat-grid-tile colspan="1" rowspan="2" class="grid-image" [style.background-image]="movie.poster_path | poster | sanitizeBackground"></mat-grid-tile>
+  <mat-grid-tile colspan="2" rowspan="2" class="gutter">
+    <h2>{{movie.title}}</h2>
+    <h5>{{movie.tagline}}</h5>
+    <mat-icon *ngFor="let i of [1,2,3,4,5]" [class.shine]="star(i, movie.vote_average)">star</mat-icon>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="3" class="gutter">
+    <h6>Released on {{movie.release_date | date}}</h6>
+    <p>{{movie.overview}}</p>
+  </mat-grid-tile>
+</mat-grid-list>
