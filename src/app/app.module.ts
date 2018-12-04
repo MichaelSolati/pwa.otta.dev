@@ -14,7 +14,7 @@ import { environment } from '../environments/environment';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: environment.appId }),
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule.forRoot(),

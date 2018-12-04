@@ -32,7 +32,8 @@ export class NavbarComponent implements OnInit {
     return this._title;
   }
 
-  public goBack(): void {
+  public goBack(event: MouseEvent): void {
+    event.preventDefault();
     this._location.back();
   }
 }

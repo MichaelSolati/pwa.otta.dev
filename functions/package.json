@@ -1,0 +1,43 @@
+{
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@angular/animations": "~7.1.0",
+    "@angular/cdk": "^7.1.0",
+    "@angular/common": "~7.1.0",
+    "@angular/compiler": "~7.1.0",
+    "@angular/core": "~7.1.0",
+    "@angular/forms": "~7.1.0",
+    "@angular/http": "^7.1.1",
+    "@angular/material": "^7.1.0",
+    "@angular/platform-browser": "~7.1.0",
+    "@angular/platform-browser-dynamic": "~7.1.0",
+    "@angular/platform-server": "^7.1.1",
+    "@angular/pwa": "^0.11.1",
+    "@angular/router": "~7.1.0",
+    "@angular/service-worker": "~7.1.0",
+    "@nguniversal/express-engine": "^7.0.2",
+    "@nguniversal/module-map-ngfactory-loader": "^7.0.2",
+    "core-js": "^2.5.4",
+    "express": "^4.16.4",
+    "firebase-admin": "~6.0.0",
+    "firebase-functions": "^2.1.0",
+    "ngmeta": "^7.0.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "~6.3.3",
+    "tslib": "^1.9.0",
+    "zone.js": "~0.8.26"
+  },
+  "devDependencies": {
+    "typescript": "~3.1.6"
+  },
+  "private": true
+}

@@ -4,9 +4,11 @@
 /dist
 /tmp
 /out-tsc
+/functions/lib
 
 # dependencies
 /node_modules
+/functions/node_modules
 
 # profiling files
 chrome-profiler-events.json

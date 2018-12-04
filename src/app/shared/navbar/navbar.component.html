@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
-  <button mat-button *ngIf="back" (click)="goBack()">
+  <a mat-button *ngIf="back" (click)="goBack($event)" href="/">
     <mat-icon>arrow_back</mat-icon>
-  </button>
+  </a>
   <span>{{ title }}</span>
   <span class="navbar-spacer"></span>
   <a mat-button href="https://github.com/MichaelSolati/ngpwa-com" target="_blank" rel="noopener">
