@@ -1,22 +1,13 @@
 {
   "hosting": {
-    "predeploy": [
-      "npm run build",
-      "npm run build:universal",
-      "cp ./dist/ngpwa-com/index.html ./functions/lib/app/index.html"
-    ],
+    "predeploy": "sh ./deploy.sh",
     "public": "dist/ngpwa-com",
-    "redirects": [{
-      "source": "/",
-      "destination": "/home",
-      "type": 301
-    }],
+    "ignore": [
+      "index.html"
+    ],
     "rewrites": [{
       "source": "**",
       "function": "ssr"
     }]
-  },
-  "functions": {
-    "predeploy": "npm --prefix \"$RESOURCE_DIR\" run build"
   }
 }
