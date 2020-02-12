@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.michaelsolati.popularmovies",
+    "sha256_cert_fingerprints": [
+      "5A:5A:44:EB:0E:98:9A:B0:0C:6F:4E:F3:24:92:48:CF:31:60:AE:B9:2F:E3:FF:0B:B3:36:B1:62:C4:86:C2:24"
+    ]
+  }
+}]
