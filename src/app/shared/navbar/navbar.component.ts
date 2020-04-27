@@ -8,12 +8,18 @@ import { Location } from '@angular/common';
 })
 export class NavbarComponent implements OnInit {
   private _back: boolean;
+  get back(): boolean {
+    return this._back;
+  }
   @Input()
   set back(back: boolean) {
     this._back = !!back;
   }
 
   private _title = 'Popular Movies';
+  get title(): string {
+    return this._title;
+  }
   @Input()
   set title(title: string) {
     this._title = title ? title : 'Popular Movies';
@@ -22,14 +28,6 @@ export class NavbarComponent implements OnInit {
   constructor(private _location: Location) { }
 
   ngOnInit() {
-  }
-
-  get back(): boolean {
-    return this._back;
-  }
-
-  get title(): string {
-    return this._title;
   }
 
   public goBack(event: MouseEvent): void {

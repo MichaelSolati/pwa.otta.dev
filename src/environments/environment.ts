@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   appId: 'ngpwa-com',
   title: 'Popular Movies',
-  description: 'An Angular PWA showing popular movies!',
+  description: 'A PWA showing popular movies!',
   moviedb: null
 };
 
