@@ -1,5 +1,10 @@
 name: Deploy
-on: [push]
+on:
+  push:
+    branches:
+      - 'master'
+    tags-ignore:
+      - v*
 env:
   FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 jobs:
