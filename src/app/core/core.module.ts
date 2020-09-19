@@ -1,22 +1,16 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { NgMetaModule } from 'ngmeta';
+import { NgMeta } from 'ngmeta';
 
 import { MoviesService } from './services/movies.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    HttpClientModule,
-    NgMetaModule.forRoot()
-  ],
-  providers: [
-    MoviesService
-  ]
+  imports: [CommonModule, HttpClientModule],
+  providers: [MoviesService, NgMeta],
 })
 export class CoreModule {
-  static forRoot(): ModuleWithProviders {
-    return { ngModule: CoreModule, providers: [MoviesService] };
+  static forRoot(): ModuleWithProviders<CoreModule> {
+    return { ngModule: CoreModule, providers: [MoviesService, NgMeta] };
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { NgMetaService } from 'ngmeta';
+import { NgMeta } from 'ngmeta';
 import { Observable } from 'rxjs';
 
 import { environment } from '../../environments/environment';
@@ -13,14 +13,12 @@ import { MoviesService } from '../core/services/movies.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
-  constructor(private _ms: MoviesService, private _ngmeta: NgMetaService) { }
+  constructor(private _ms: MoviesService, private _ngmeta: NgMeta) { }
 
   ngOnInit() {
-    this._ngmeta.setHead({
+    this._ngmeta.setAll({
       title: environment.title,
-      meta: [
-        { attribute: 'name', type: 'description', content: environment.description }
-      ]
+      description: environment.description
     });
   }
 

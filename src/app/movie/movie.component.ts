@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgMetaService } from 'ngmeta';
+import { NgMeta } from 'ngmeta';
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';
 
@@ -17,17 +17,15 @@ export class MovieComponent implements OnInit, OnDestroy {
   private _idSubscription: Subscription;
   private _movie: any;
 
-  constructor(private _ms: MoviesService, private _route: ActivatedRoute, private _ngmeta: NgMetaService) { }
+  constructor(private _ms: MoviesService, private _route: ActivatedRoute, private _ngmeta: NgMeta) { }
 
   ngOnInit() {
     this._idSubscription = this._route.params.subscribe((params: any) => {
       this._ms.getMovie(params.id).pipe((first())).subscribe(e => {
         this._movie = e;
-        this._ngmeta.setHead({
+        this._ngmeta.setAll({
           title: e.title + ' | ' + environment.title,
-          meta: [
-            { attribute: 'name', type: 'description', content: e.overview }
-          ]
+          description: e.overview
         });
       });
     });
