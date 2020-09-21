@@ -12,6 +12,7 @@
     "serve:ssr": "node dist/pwa-otta-dev/server/main.js",
     "build:ssr": "npm run build && ng run pwa-otta-dev:server:production",
     "prerender": "ng run pwa-otta-dev:prerender",
+    "environment": "ts-node --skip-project environment-injector",
     "deploy": "firebase deploy",
     "postinstall": "npm --prefix ./functions install ./functions"
   },

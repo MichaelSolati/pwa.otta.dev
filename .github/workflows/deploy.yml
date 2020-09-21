@@ -28,6 +28,10 @@ jobs:
             ${{ runner.os }}-node-
       - name: NPM Install
         run: npm install
+      - name: Generate Environment
+        env:
+          MOVIEDB: ${{ secrets.MOVIEDB }}
+        run: npm run environment
       - name: Install Firebase Tools
         run: npm i -g firebase-tools
       - name: Firebase Deploy
