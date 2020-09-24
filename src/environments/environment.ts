@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  appId: 'ngpwa-com',
+  appId: 'pwa-otta-dev',
   title: 'Popular Movies',
   description: 'A PWA showing popular movies!',
   moviedb: null
