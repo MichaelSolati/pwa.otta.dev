@@ -5,8 +5,6 @@ on:
       - 'main'
     tags-ignore:
       - v*
-env:
-  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 jobs:
   deploy:
     name: Deploy
@@ -17,22 +15,16 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-          registry-url: https://registry.npmjs.org/
-      - name: NPM Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: NPM Install
-        run: npm install
+          node-version: '12'
+      - name: Install Dependencies
+        run: |
+          npm i
+          npm i -g firebase-tools
       - name: Generate Environment
         env:
           MOVIEDB: ${{ secrets.MOVIEDB }}
         run: npm run environment
-      - name: Install Firebase Tools
-        run: npm i -g firebase-tools
       - name: Firebase Deploy
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: firebase deploy --non-interactive --token $FIREBASE_TOKEN
