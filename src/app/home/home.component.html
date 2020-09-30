@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <mat-list>
   <a *ngFor="let movie of movies$ | async" mat-list-item [routerLink]="['/', 'movie', movie.id]">
-    <img mat-list-avatar [src]="movie.poster_path | poster" [alt]="movie.title + ' Poster'">
+    <img mat-list-avatar width="40" height="60" [src]="movie.poster_path | poster" [alt]="movie.title + ' Poster'">
     <h4 mat-line>{{movie.title}}</h4>
     <p mat-line> {{movie.overview}} </p>
   </a>

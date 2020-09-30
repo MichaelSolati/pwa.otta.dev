@@ -1,16 +1,12 @@
-mat-list {
-  padding: 0;
+a[mat-list-item] {
+  text-decoration: none;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #bdbdbd;
 }
 
 img.mat-list-avatar[mat-list-avatar] {
   width: 40px;
-  height: auto;
+  height: 60px;
   border-radius: 0;
-}
-
-a.mat-list-item[mat-list-item] {
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: #BDBDBD;
-  width: 100vw;
 }

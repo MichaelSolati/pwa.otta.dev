@@ -176,6 +176,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "pwa-otta-dev"
+    }
+  },
+  "defaultProject": "pwa-otta-dev",
+  "cli": {
+    "analytics": "eb01676d-6fa1-4c3e-a79f-cad8e9bc4908"
+  }
 }

@@ -12,7 +12,7 @@ $text: #FFFFFF;
 $background: #212121;
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: $background;
   color: $text;
   margin: 0;
@@ -44,11 +44,11 @@ h1, h2, h3, h4, h5, h6, label, p {
 }
 
 .grid-image {
-    background: no-repeat rgba(0,0,0,0);
-    background-size: contain;
-    background-position: center;
-    height: 100%;
-    width: auto;
+  background: no-repeat rgba(0, 0, 0, 0);
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: auto;
 }
 
 .gutter {
