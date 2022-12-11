@@ -31,7 +31,7 @@
     "@angular/router": "~11.0.9",
     "@angular/service-worker": "~11.0.9",
     "@nguniversal/express-engine": "^10.1.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ngmeta": "^11.2.0",
     "parse5": "^6.0.1",
     "rxjs": "~6.6.0",
